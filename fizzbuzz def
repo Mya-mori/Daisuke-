@@ -1,0 +1,11 @@
+def fizzbuzz(count = 15, fizzmod = 3, buzzmod = 5):
+  for i in range(1, count+1):
+    if i % fizzmod == 0 and i % buzzmod == 0:
+      print("fizzbuzz")
+    elif i % fizzmod == 0:
+      print("fizz")
+    elif i % buzzmod == 0:
+      print("buzz")
+    else:
+      print(i)
+fizzbuzz()
