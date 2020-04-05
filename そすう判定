@@ -1,0 +1,8 @@
+con = int(input())
+
+for n in range(2, con):
+  if con % n == 0:
+    print(con, "はそすうではない")
+    break
+else:
+  print(con, "はそすう")
