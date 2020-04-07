@@ -1,0 +1,12 @@
+words = ["HND", "NRT", "KIX", "NGO", "NGO"]
+result = False
+
+for i in range(len(words)):
+    for j in range(len(words)):
+        if i != j and words[i] == words[j]:
+            result = True
+            
+if result:
+    print("true")
+else:
+    print("false")
