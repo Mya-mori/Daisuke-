@@ -10,3 +10,10 @@ while words:
             new_words.append(word)
 
     words = new_words
+    
+------------------------------------------------------
+words = input().split()
+
+while words:
+    print(words[0], words.count(words[0]))
+    words = [word for word in words if word != words[0]]
