@@ -1,0 +1,12 @@
+words = input().split()
+
+while words:
+    count_word = words[0]
+    print(count_word, words.count(count_word))
+
+    new_words = []
+    for word in words:
+        if word != count_word:
+            new_words.append(word)
+
+    words = new_words
