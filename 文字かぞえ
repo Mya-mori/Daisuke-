@@ -1,0 +1,8 @@
+words = "なあになああにだにあうえなうあ"
+counter = {} #はこの制作
+for character in words:　#文字を繰り返す
+  if character not in counter:　#数を数える
+    counter[character] = 0
+  counter[character] += 1
+for character, number in counter.items():　#結果の評価
+  print(f"{character} : {number}")
