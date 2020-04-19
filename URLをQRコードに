@@ -1,0 +1,27 @@
+import qrcode #QRコード生成用
+import qrcode.image.svg #QRをSVG画像で保存
+
+class MakeQR: #クラス定義
+  def __init__(self, output): #コンストラクタ
+    self.url = " " #URL
+    self.output = output #引数からoutputを設定
+
+  def make(self): #QR画像の生成
+    factory = qrcode.image.svg.SvgImage
+    img = qrcode.make(self.url, image_factory = factory)
+    img.save(self.output)
+
+  def run(self): #実行用メソッド
+    url = input("input url")
+    if not url.startswith("http"):
+      print("try again")
+      return 
+    self.url = url
+    self.make() #makeメソッドの実行と保存
+
+if __name__ == "__main__":
+  import sys #sysライブラリ
+  arge = sys.argv #コマンドライン引数
+  output = arge[1] #一つ目の引数をoutput変数へ
+  app = MakeQR(output) #outputの指定
+  app.make()
